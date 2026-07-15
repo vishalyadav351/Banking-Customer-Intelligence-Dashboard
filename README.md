@@ -8,24 +8,28 @@
 An end-to-end, enterprise-grade Data Analytics and Business Intelligence solution designed for the Banking and Financial Services (BFSI) sector. This platform processes raw, disparate transactional data into high-fidelity, interactive operational dashboards.
 
 ---
+
 ## 🏗️ System Architecture & Data Pipeline
 
-Below is the conceptual framework of the data engineering workflow implemented in this project:
+[Raw Banking Databases]
+       │
+       ▼  (Extraction via Complex Queries)
+[SQL Engine: Scripts / CTEs / Joins]
+       │
+       ▼  (ETL & Structural Cleaning)
+[Power Query Engine]
+       │
+       ▼  (Data Modeling)
+[Star Schema: 1:N Relationships]
+       │
+       ▼  (Analytical Layer)
+[DAX Calculations]
+       │
+       ▼  (Presentation Layer)
+[Interactive Power BI UI Dashboard]
 
-```mermaid
-graph TD
-    A["Raw Banking Databases"] --> B("Extraction Layer")
-    B --> C("ETL & Data Cleaning")
-    C --> D("Data Modeling")
-    D --> E("Analytical Layer")
-    E --> F["Presentation Layer: Interactive Power BI UI"]
+---
 
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
-    style C fill:#bfb,stroke:#333,stroke-width:2px
-    style D fill:#fbb,stroke:#333,stroke-width:2px
-    style E fill:#ffb,stroke:#333,stroke-width:2px
-    style F fill:#f96,stroke:#333,stroke-width:2px
 ## 🛠️ Data Engineering & ETL Deep Dive
 
 ### 1. Extraction Layer (SQL Engineering)
@@ -81,8 +85,5 @@ The final deliverable is an interactive, multi-page business console comprised o
 1. **Clone the Repository:**
    ```bash
    git clone [https://github.com/yourusername/bank-analytics-platform.git](https://github.com/vishalyadav351/bank-analytics-platform.git)
-Review Database Logic: Navigated to the /sql_scripts folder to inspect production-ready schema modification queries.
-
-Initialize the Console: Open the compiled .pbix solution within Power BI Desktop to leverage interactive cross-filtering and synchronized global slicers.
-▼  [Presentation Layer]
-[Interactive Power BI UI]
+1  Review Database Logic: Navigated to the /banking_queries.sql file to inspect production-ready schema modification queries.
+2  Initialize the Console: Open the compiled .pbix solution within Power BI Desktop to leverage interactive cross-filtering and synchronized global slicers.
