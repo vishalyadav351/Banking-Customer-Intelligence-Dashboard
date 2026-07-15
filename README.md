@@ -14,11 +14,11 @@ Below is the conceptual framework of the data engineering workflow implemented i
 
 ```mermaid
 graph TD
-    A[💾 Raw Banking Databases] -->|SQL Server / DB Engine| B(🔍 Extraction Layer)
-    B -->|Complex Queries / CTEs / Joins| C(🧹 ETL & Data Cleaning)
-    C -->|Power Query Engine| D(📐 Data Modeling)
-    D -->|Star Schema 1:N Relations| E(🧮 Analytical Layer)
-    E -->|DAX Calculations| F[📊 Presentation Layer: Interactive Power BI UI]
+    A["Raw Banking Databases"] --> B("Extraction Layer")
+    B --> C("ETL & Data Cleaning")
+    C --> D("Data Modeling")
+    D --> E("Analytical Layer")
+    E --> F["Presentation Layer: Interactive Power BI UI"]
 
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style B fill:#bbf,stroke:#333,stroke-width:2px
