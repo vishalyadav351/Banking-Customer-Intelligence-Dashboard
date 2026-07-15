@@ -8,31 +8,24 @@
 An end-to-end, enterprise-grade Data Analytics and Business Intelligence solution designed for the Banking and Financial Services (BFSI) sector. This platform processes raw, disparate transactional data into high-fidelity, interactive operational dashboards.
 
 ---
-
 ## 🏗️ System Architecture & Data Pipeline
 
 Below is the conceptual framework of the data engineering workflow implemented in this project:
 
-[Raw Banking Databases] ──> (SQL Server / DB Engine)
-│
-▼  [Extraction via Complex Queries]
-(SQL Scripts / CTEs / Joins)
-│
-▼  [ETL & Structural Cleaning]
-(Power Query Engine)
-│
-▼  [Data Modeling]
-┌─────────────────┐
-│   STAR SCHEMA   │
-│  (1:N Relations)│
-└────────┬────────┘
-│
-▼  [Analytical Layer]
-(DAX Calculations)
-│
+```mermaid
+graph TD
+    A[💾 Raw Banking Databases] -->|SQL Server / DB Engine| B(🔍 Extraction Layer)
+    B -->|Complex Queries / CTEs / Joins| C(🧹 ETL & Data Cleaning)
+    C -->|Power Query Engine| D(📐 Data Modeling)
+    D -->|Star Schema 1:N Relations| E(🧮 Analytical Layer)
+    E -->|DAX Calculations| F[📊 Presentation Layer: Interactive Power BI UI]
 
----
-
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bfb,stroke:#333,stroke-width:2px
+    style D fill:#fbb,stroke:#333,stroke-width:2px
+    style E fill:#ffb,stroke:#333,stroke-width:2px
+    style F fill:#f96,stroke:#333,stroke-width:2px
 ## 🛠️ Data Engineering & ETL Deep Dive
 
 ### 1. Extraction Layer (SQL Engineering)
