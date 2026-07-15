@@ -12,3 +12,23 @@ An end-to-end, enterprise-grade Data Analytics and Business Intelligence solutio
 ## 🏗️ System Architecture & Data Pipeline
 
 Below is the conceptual framework of the data engineering workflow implemented in this project:
+
+[Raw Banking Databases] ──> (SQL Server / DB Engine)
+│
+▼  [Extraction via Complex Queries]
+(SQL Scripts / CTEs / Joins)
+│
+▼  [ETL & Structural Cleaning]
+(Power Query Engine)
+│
+▼  [Data Modeling]
+┌─────────────────┐
+│   STAR SCHEMA   │
+│  (1:N Relations)│
+└────────┬────────┘
+│
+▼  [Analytical Layer]
+(DAX Calculations)
+│
+▼  [Presentation Layer]
+[Interactive Power BI UI]
