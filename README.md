@@ -102,5 +102,7 @@ The final deliverable is an interactive, multi-page business console comprised o
 1. **Clone the Repository:**
    ```bash
    git clone [https://github.com/yourusername/bank-analytics-platform.git](https://github.com/vishalyadav351/bank-analytics-platform.git)
-1  Review Database Logic: Navigated to the /banking_queries.sql file to inspect production-ready schema modification queries.
-2  Initialize the Console: Open the compiled .pbix solution within Power BI Desktop to leverage interactive cross-filtering and synchronized global slicers.
+ ### 🔹 1. File Name
+Review Database Logic: Navigated to the /banking_queries.sql file to inspect production-ready schema modification queries.
+###  4. project overview pbix
+ Initialize the Console: Open the compiled .pbix solution within Power BI Desktop to leverage interactive cross-filtering and synchronized global slicers.
