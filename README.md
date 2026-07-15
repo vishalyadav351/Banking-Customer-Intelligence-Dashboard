@@ -7,28 +7,45 @@
 
 An end-to-end, enterprise-grade Data Analytics and Business Intelligence solution designed for the Banking and Financial Services (BFSI) sector. This platform processes raw, disparate transactional data into high-fidelity, interactive operational dashboards.
 
----
-
 ## 🏗️ System Architecture & Data Pipeline
 
-[Raw Banking Databases]
-       │
-       ▼  (Extraction via Complex Queries)
-[SQL Engine: Scripts / CTEs / Joins]
-       │
-       ▼  (ETL & Structural Cleaning)
-[Power Query Engine]
-       │
-       ▼  (Data Modeling)
-[Star Schema: 1:N Relationships]
-       │
-       ▼  (Analytical Layer)
-[DAX Calculations]
-       │
-       ▼  (Presentation Layer)
-[Interactive Power BI UI Dashboard]
+Below is the structured data engineering workflow and operational roadmap implemented in this project:
 
----
+┌────────────────────────────────────────────────────────────────────────┐
+│                      💾 RAW TRANSACTIONAL DATABASES                    │
+│      (Source tables containing unstructured customer & log logs)       │
+└──────────────────────────────────┬─────────────────────────────────────┘
+                                   │
+                                   ▼  [Extraction via Complex Queries]
+┌────────────────────────────────────────────────────────────────────────┐
+│                      🔍 SQL ENGINEERING LAYER                           │
+│     (Relational Joins, Window Functions, CTEs, & Aggregations)         │
+└──────────────────────────────────┬─────────────────────────────────────┘
+                                   │
+                                   ▼  [Data Cleaning & Standardization]
+┌────────────────────────────────────────────────────────────────────────┐
+│                      🧹 POWER QUERY ETL ENGINE                         │
+│   (Null imputation, string trimming, custom Calendar dimension table)  │
+└──────────────────────────────────┬─────────────────────────────────────┘
+                                   │
+                                   ▼  [Relational Optimization]
+┌────────────────────────────────────────────────────────────────────────┐
+│                      📐 STAR SCHEMA DATA MODEL                         │
+│  (1:N Direct Unidirectional Relationships | Fact & Dimension Split)   │
+└──────────────────────────────────┬─────────────────────────────────────┘
+                                   │
+                                   ▼  [Analytical Engineering]
+┌────────────────────────────────────────────────────────────────────────┐
+│                      🧮 DAX CALCULATIONS LAYER                         │
+│    (Time-Series intelligence, Credit Utilization, Approval Ratios)     │
+└──────────────────────────────────┬─────────────────────────────────────┘
+                                   │
+                                   ▼  [Presentation Tier]
+┌────────────────────────────────────────────────────────────────────────┐
+│             📊 HIGH-FIDELITY INTERACTIVE POWER BI UI                   │
+│         (Cross-filtering, global slicers, operational console)        │
+└────────────────────────────────────────────────────────────────────────┘
+
 
 ## 🛠️ Data Engineering & ETL Deep Dive
 
